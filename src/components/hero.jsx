@@ -1,7 +1,8 @@
 import React from 'react';
 import '../css/hero.css';
-import herobanner from '../images/hero-banner.jpg';
-import rotateimage from '../images/rotate-img.png';
+// import herobanner from '../assets/images/hero-banner.jpg';
+// import rotateimage from '../assets/images/rotate-img.png';
+import herobanner from '../assets/images/2.jpg';
 import 'ionicons';
 
 
@@ -14,7 +15,7 @@ function Hero() {
           <div className="elem elem-1"><p className="elem-title">2</p><p className="elem-text">Years of Success</p></div>
           <div className="elem elem-2"><p className="elem-title">40+</p><p className="elem-text">Projects Completed</p></div>
           <div className="elem elem-3"><ion-icon name="trophy"></ion-icon></div>
-          <img src={rotateimage} alt="I'm developer from New York" className="rotate-img" />
+          {/* <img src={rotateimage} alt="I'm developer from New York" className="rotate-img" /> */}
         </div>
 
         <div className="hero-content">

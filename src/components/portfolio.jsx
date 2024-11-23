@@ -1,10 +1,10 @@
 import React from 'react';
 import "../css/portfolio.css";
 
-import portfolio1 from '../images/portfolio-1.jpg';
-import portfolio2 from '../images/portfolio-2.jpg';
-import portfolio3 from '../images/portfolio-3.jpg';
-import portfolio4 from '../images/portfolio-4.jpg';
+import portfolio1 from '../assets/images/portfolio-1.jpg';
+import portfolio2 from '../assets/images/portfolio-2.jpg';
+import portfolio3 from '../assets/images/portfolio-3.jpg';
+import portfolio4 from '../assets/images/portfolio-4.jpg';
 
 export default function Portfolio() {
   const projects = [

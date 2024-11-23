@@ -1,0 +1,183 @@
+/* Importing a professional font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+/* General Portfolio Styling */
+.portfolio {
+  font-family: 'Inter', sans-serif; /* Apply the new font to the entire portfolio section */
+  font-size: larger;
+  text-align: left;
+}
+
+.section-subtitle{
+  font-family: 'Inter', sans-serif; 
+  font-size: x-large;
+  text-align: left;
+
+}
+
+.portfolio .section-title {
+  font-size: 2.5rem; /* Larger title for better visibility */
+  margin-bottom: 18px;
+  font-weight: 600; /* Bold section titles */
+  color: var(--white);
+}
+
+.portfolio .section-text {
+  font-size: 1.9rem; /* Make section text slightly larger */
+  line-height: 1.6; /* Improve line height for readability */
+  color: var(--white);
+  margin-bottom: 80px;
+}
+
+.portfolio-list {
+  display: grid;
+  gap: 60px;
+  grid-template-columns: 1fr;
+}
+
+.portfolio-card {
+  background-color: var(--independence);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding: 120px 20px;
+  border-radius: var(--radius-20);
+  color: var(--white);
+  font-weight: var(--fw-600);
+  transition: background-size 0.3s ease, transform 0.3s ease;
+  position: relative;
+  font-family: 'Inter', sans-serif; /* Use the same font family for the cards */
+}
+
+.portfolio-card:hover {
+  background-size: 130%;
+  transform: translateY(-5px); /* Subtle hover lift effect */
+}
+
+.portfolio-card .card-subtitle {
+  color: var(--orange-soda);
+  margin-bottom: 5px;
+  font-size: 3.2rem; /* Slightly larger subtitle */
+  font-weight: 600; /* Bold subtitle for emphasis */
+  transition: color 0.3s ease;
+}
+
+.portfolio-card .card-title {
+  max-width: 20ch;
+  font-size: 1.8rem; /* Slightly larger title */
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.portfolio-card .btn-link {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 1.6rem; /* Font size for links */
+  text-transform: uppercase;
+  transition: color 0.3s ease;
+}
+
+.portfolio-card .btn-link ion-icon {
+  color: var(--orange-soda);
+  font-size: 1.6rem;
+  transition: transform 0.3s ease;
+}
+
+.portfolio-card .btn-link:hover ion-icon {
+  transform: translateX(5px); /* Slight hover animation */
+}
+
+.portfolio-list > li:nth-child(even) .card-content {
+  margin-inline-start: auto;
+}
+
+/* Mobile and Tablet Responsiveness */
+@media (min-width: 600px) {
+  .portfolio-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .portfolio-list > li:nth-child(even) .card-content {
+    margin-inline-start: 50%;
+  }
+}
+
+@media (min-width: 768px) {
+  .portfolio-card {
+    background-size: 115%;
+    padding-inline: 80px;
+  }
+}
+
+/* Enhanced Hover Effects */
+.portfolio-card:hover .btn-link ion-icon {
+  transform: rotate(20deg); /* Subtle rotation on hover */
+}
+
+.portfolio-card .card-content {
+  animation: fadeIn 0.5s ease-out; /* Fade-in effect for card content */
+}
+
+/* Fade-in keyframes for card content */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Accessibility Focus States */
+.portfolio-card:is(:hover, :focus) {
+  background-size: 130%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.portfolio-card:focus-within .card-title,
+.portfolio-card:focus-within .card-subtitle {
+  color: var(--orange-soda); /* Emphasize focus */
+}
+
+/* Improved Text Readability */
+.portfolio-card .card-subtitle,
+.portfolio-card .card-title {
+  font-family: 'Inter', sans-serif; /* Consistent font family */
+  line-height: 1.4; /* Increase line-height for readability */
+}
+
+.portfolio-card .card-title {
+  font-weight: 600; /* Make the title bold */
+}
+
+/* Text Contrast & Readability */
+.portfolio-card .card-subtitle, 
+.portfolio-card .card-title, 
+.portfolio-card .btn-link {
+  color: var(--white); /* Ensure text stands out on dark background */
+}
+
+/* Clean up link hover styles */
+.portfolio-card .btn-link:hover {
+  color: var(--orange-soda);
+  text-decoration: underline; /* Underline link on hover */
+}
+
+
+@media (min-width: 768px) {
+
+  .portfolio-card {
+    background-size: 115%;
+    padding-inline: 80px;
+  }
+
+  .portfolio-card:is(:hover, :focus) { background-size: 130%; }
+
+
+}
+
+
+  .portfolio-card .card-subtitle { font-size: var(--fs-5); }
+
+  .portfolio-card .btn-link { --fs-6: 1.6rem; }

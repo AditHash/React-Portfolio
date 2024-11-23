@@ -1,0 +1,70 @@
+.contact-card {
+    background-color: black;
+    padding: 40px 20px;
+    border-radius: var(--radius-20);
+    text-align: center;
+    box-shadow: 0 4px 6px green;
+  }
+  
+  .contact-card .card-subtitle {
+    color: green;
+    font-family: var(--ff-barlow);
+    font-size: var(--fs-4);
+    font-weight: var(--fw-600);
+    margin-bottom: 10px;
+  }
+  
+  .contact .section-title {
+    margin-bottom: 20px;
+    color: blue;
+    font-size: var(--fs-5);
+  }
+  
+  
+  .social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px; /* Icon box width */
+    height: 100px; /* Icon box height */
+    border-radius: 10px; /* Rounds the edges for a smooth square look */
+    background-color: black; /* Background color for the icon box */
+    color: greenyellow; /* Icon color */
+    font-size: 1.5rem; /* Icon size */
+    transition: all 0.3s ease;
+  }
+  
+  .social-link:is(:hover, :focus) {
+    background-color: white; /* Highlight background on hover */
+    color: black; /* Change icon color on hover */
+    transform: scale(1.1); /* Slight zoom effect */
+  }
+  
+
+  .social-links {
+    display: flex;
+    justify-content: center; /* Center-align the icons */
+    align-items: center; /* Align icons vertically in the container */
+    gap: 60px; /* Horizontal spacing between icons */
+    margin-top: 20px;
+  }
+  
+  .social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px; /* Icon box width */
+    height: 60px; /* Icon box height */
+    border-radius: 10px; /* Rounds the edges for a smooth square look */
+    background-color: black; /* Background color for the icon box */
+    color: green; /* Icon color */
+    font-size: 3rem; /* Icon size */
+    transition: all 0.3s ease;
+  }
+  
+  .social-link:is(:hover, :focus) {
+    background-color: orangered; /* Highlight background on hover */
+    color: var(--white); /* Change icon color on hover */
+    transform: scale(1.5); /* Slight zoom effect */
+  }
+  

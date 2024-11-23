@@ -1,0 +1,184 @@
+/* General Skills Section Styles */
+.skills {
+  padding: 2rem 0;
+  background: rgba(0, 0, 0, 0.75); /* Semi-transparent black background */
+  backdrop-filter: blur(10px); /* Glass blur effect */
+  position: relative; /* For positioning background gradient */
+  overflow: hidden; /* Prevents overflow during animation */
+  opacity: 0; /* Initial opacity for fade-in effect */
+  transform: translateY(20px); /* Slight downwards offset */
+  animation: fadeInUp 1s ease-out forwards; /* Fade-in and move-up animation */
+}
+
+.skills::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8));
+  z-index: -1; /* Ensures the gradient is behind the content */
+  filter: blur(15px); /* Adds subtle blur to the gradient for depth */
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  opacity: 0;
+  animation: fadeIn 1s ease-out forwards;
+  animation-delay: 0.3s; /* Delay the section title fade-in */
+}
+
+/* Fade-in animation for skills section */
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+/* Skills Categories and Items */
+.skills-category {
+  margin-bottom: 3rem;
+}
+
+.category-title {
+  font-size: 1.75rem;
+  font-weight: 500;
+  color: #4caf50;
+  margin-bottom: 1.25rem;
+  text-align: center;
+  text-transform: capitalize;
+  opacity: 0;
+  animation: fadeIn 1s ease-out forwards;
+  animation-delay: 0.5s; /* Slight delay for category titles */
+}
+
+.skills-items {
+  display: flex;
+  flex-wrap: nowrap; /* Prevent wrapping of items */
+  gap: 2.5rem; /* Increase gap for more breathing room */
+  padding: 1rem;
+  justify-content: flex-start; /* Align items to the start */
+  width: 100%; /* Ensure full width */
+  overflow-x: auto; /* Allow horizontal scrolling */
+  scroll-snap-type: x mandatory; /* Ensures snapping to the next icon on scroll */
+  animation: scroll-left 20s linear infinite; /* Cyclic animation */
+  transition: transform 0.3s ease;
+}
+
+/* Fade-in animation for skill items */
+@keyframes fadeInItems {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Add a fade-in effect to each skill item when it enters the viewport */
+.skills-item {
+  flex: 0 0 auto; /* Prevent shrinking */
+  width: 160px; /* Increased width for larger icons */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent white */
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  scroll-snap-align: start; /* Ensures each item snaps to the start */
+  opacity: 0; /* Initial opacity for fade-in */
+  animation: fadeInItems 0.5s ease-out forwards;
+  animation-delay: 0.7s; /* Delay for each skill item to fade in */
+}
+
+.skills-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15), 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.skills-icon {
+  font-size: 4rem; /* Larger icon size */
+  color: #4caf50;
+  margin-bottom: 1rem;
+}
+
+.skills-title {
+  font-size: 1.25rem; /* Slightly larger title */
+  font-weight: 500;
+  color: #ffffff;
+}
+
+/* Scrollbar Customization */
+.skills-items::-webkit-scrollbar {
+  height: 8px;
+}
+
+.skills-items::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 10px;
+}
+
+.skills-items::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
+}
+
+/* Scroll-In Animation for the Section */
+.skills {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .skills-item {
+    width: 140px; /* Adjust item width for smaller screens */
+    padding: 15px;
+  }
+
+  .skills-icon {
+    font-size: 3.5rem; /* Adjust icon size */
+  }
+
+  .skills-title {
+    font-size: 1.1rem; /* Adjust title size */
+  }
+}
+
+@media (max-width: 480px) {
+  .skills-item {
+    width: 120px; /* Further adjust item width for mobile */
+    padding: 12px;
+  }
+
+  .skills-icon {
+    font-size: 3rem; /* Smaller icon size for mobile */
+  }
+
+  .skills-title {
+    font-size: 1rem; /* Adjust title size */
+  }
+}

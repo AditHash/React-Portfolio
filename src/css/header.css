@@ -1,0 +1,87 @@
+.logo{
+  color: white;
+}
+
+/* Header Styles */
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding-block: 30px;
+  background-color: transparent; /* Initial transparent background */
+  box-shadow: none;
+  transition: var(--transition-2);
+  z-index: 10;
+}
+
+.header.active {
+  background-color: rgba(0, 0, 0, 0.783) ; /* Opaque background on scroll */
+  box-shadow: var(--shadow);
+  padding-block: 20px;
+}
+
+/* Navbar List */
+.navbar-list {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+/* Navbar Links */
+.navbar-link {
+  color: var(--white);
+  font-family: var(--ff-barlow);
+  padding-block: 3px;
+  transition: var(--transition-1);
+}
+
+.navbar-link:is(:hover, :focus) {
+  color: var(--orange-soda);
+}
+
+/* Navbar Button */
+.navbar .btn {
+  background-color: var(--orange-soda);
+  margin-block-start: 0;
+  padding: 7px 30px;
+  color: var(--white);
+  border-radius: 50px;
+  font-family: var(--ff-barlow);
+  font-weight: var(--fw-600);
+  transition: var(--transition-2);
+}
+
+.navbar .btn:hover,
+.navbar .btn:focus {
+  background-color: var(--klein-blue);
+}
+
+
+
+.nav-toggle-btn {
+  font-size: 3rem;
+  color: var(--white);
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: none !important; 
+}
+
+.nav-toggle-btn .menu-icon,
+.nav-toggle-btn.active .close-icon {
+  display: block;
+}
+
+.nav-toggle-btn .close-icon,
+.nav-toggle-btn.active .menu-icon {
+  display: none;
+}
+
+
+@media screen and (max-width: 560px) {
+  .nav-toggle-btn {
+    display: block;
+  }
+}
+
+

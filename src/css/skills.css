@@ -17,7 +17,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(45deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8));
+  background: linear-gradient(45deg, rgba(0, 0, 0, 0.6), rgba(12, 23, 39, 0.8));
   z-index: -1; /* Ensures the gradient is behind the content */
   filter: blur(15px); /* Adds subtle blur to the gradient for depth */
 }
@@ -74,10 +74,10 @@
 .skills-items {
   display: flex;
   flex-wrap: nowrap; /* Prevent wrapping of items */
-  gap: 2.5rem; /* Increase gap for more breathing room */
+  gap: 5rem; /* Increase gap for more breathing room */
   padding: 1rem;
   justify-content: flex-start; /* Align items to the start */
-  width: 100%; /* Ensure full width */
+  width: 200%; /* Ensure full width */
   overflow-x: auto; /* Allow horizontal scrolling */
   scroll-snap-type: x mandatory; /* Ensures snapping to the next icon on scroll */
   animation: scroll-left 20s linear infinite; /* Cyclic animation */
@@ -99,15 +99,11 @@
 /* Add a fade-in effect to each skill item when it enters the viewport */
 .skills-item {
   flex: 0 0 auto; /* Prevent shrinking */
-  width: 160px; /* Increased width for larger icons */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  padding: 20px;
-  background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent white */
-  border-radius: 12px;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.05);
+  width: 150px; /* Increased width for larger cards */
+  padding: 35px; /* Increased padding for larger cards */
+  background-color: #ffffff; /* White background */
+  border-radius: 20px; /* Slightly larger border radius */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15), 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   scroll-snap-align: start; /* Ensures each item snaps to the start */
   opacity: 0; /* Initial opacity for fade-in */
@@ -116,20 +112,20 @@
 }
 
 .skills-item:hover {
-  transform: scale(1.05);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15), 0 4px 8px rgba(0, 0, 0, 0.1);
+  transform: scale(1.5); /* Slightly larger scale on hover */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2), 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
 .skills-icon {
-  font-size: 4rem; /* Larger icon size */
   color: #4caf50;
-  margin-bottom: 1rem;
+  margin-bottom: 10rem; /* Increased margin for spacing */
+  font-size: xx-large;
 }
 
 .skills-title {
-  font-size: 1.25rem; /* Slightly larger title */
-  font-weight: 500;
-  color: #ffffff;
+  font-size: xx-large; /* Larger title font size */
+  font-weight: bolder; /* Slightly bolder text */
+  color: black; /* Black text color */
 }
 
 /* Scrollbar Customization */
@@ -155,30 +151,52 @@
 /* Responsive Design */
 @media (max-width: 768px) {
   .skills-item {
-    width: 140px; /* Adjust item width for smaller screens */
-    padding: 15px;
+    width: 180px; /* Adjust card width for smaller screens */
+    padding: 20px;
   }
 
   .skills-icon {
-    font-size: 3.5rem; /* Adjust icon size */
+    font-size: 4.5rem; /* Adjust icon size */
   }
 
   .skills-title {
-    font-size: 1.1rem; /* Adjust title size */
+    font-size: 1.3rem; /* Adjust title size */
   }
 }
 
 @media (max-width: 480px) {
   .skills-item {
-    width: 120px; /* Further adjust item width for mobile */
-    padding: 12px;
+    width: 160px; /* Further adjust card width for mobile */
+    padding: 18px;
   }
 
   .skills-icon {
-    font-size: 3rem; /* Smaller icon size for mobile */
+    font-size: 4rem; /* Smaller icon size for mobile */
   }
 
   .skills-title {
-    font-size: 1rem; /* Adjust title size */
+    font-size: 1.2rem; /* Adjust title size */
   }
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 20px;
+  justify-items: center;
+  align-items: center;
+}
+
+.skills-item {
+  text-align: center;
+}
+
+.skills-icon {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.skills-title {
+  font-size: 1rem;
+  font-weight: bold;
 }

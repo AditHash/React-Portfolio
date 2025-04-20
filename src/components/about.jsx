@@ -11,8 +11,8 @@ import {
 // import aboutbanner from "../assets/images/about-banner.jpg";
 // import absoluteimage from "../assets/images/absolute-image.jpg";
 
-import aboutbanner from "../assets/images/innovation.jpg";
-import absoluteimage from "../assets/images/1.jpg";
+import aboutbanner from "../assets/images/aditya.jpg";
+import absoluteimage from "../assets/images/blog-1.jpg";
 
 import "../css/about.css";
 import { SiKubernetes, SiTerraform } from "react-icons/si";

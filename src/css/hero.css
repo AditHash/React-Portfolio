@@ -1,5 +1,3 @@
-
-
 .hero {
     background-image: url("../assets/images/hero-bg.jpg");
     background-repeat: no-repeat;
@@ -24,6 +22,7 @@
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-variant: normal;
     font-size: larger;
+    margin-top: 20px; /* Added margin for spacing */
   }
   
   
@@ -33,7 +32,7 @@
     font-size: var(--fs-5);
     font-weight: var(--fw-600);
     line-height: 1.3;
-    margin-block-end: 14px;
+    margin-block-end: 20px; /* Adjusted margin */
   }
   
   .hero-title strong {
@@ -44,8 +43,9 @@
   }
   
   .hero-text {
-    margin-block-end: 25px;
+    margin-block-end: 30px; /* Adjusted margin */
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: var(--fs-5); /* Ensures consistent font size */
   }
   
   .btn-group {

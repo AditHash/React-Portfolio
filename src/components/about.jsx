@@ -1,81 +1,106 @@
 import React from "react";
 import {
-  IoLogoReact,
-  IoLogoNodejs,
-  IoLogoPython,
-  IoLogoDocker,
-  IoLogoAndroid,
-  IoLogoAmazon,
-} from "react-icons/io5";
-
-// import aboutbanner from "../assets/images/about-banner.jpg";
-// import absoluteimage from "../assets/images/absolute-image.jpg";
-
+  SiPython,
+  SiNodedotjs,
+  SiDocker,
+  SiTensorflow,
+  SiPytorch,
+  SiFlask,
+  SiKeras,
+  SiPandas,
+  SiOpencv,
+  SiMongodb,
+  SiMysql,
+} from "react-icons/si";
+import { FaAws, FaGithub, FaLinkedin, FaTwitter, FaInstagram } from "react-icons/fa"; // Added social icons
 import aboutbanner from "../assets/images/aditya.jpg";
 import absoluteimage from "../assets/images/blog-1.jpg";
-
 import "../css/about.css";
-import { SiKubernetes, SiTerraform } from "react-icons/si";
+
 
 function About() {
   return (
     <section className="section about" id="about">
       <div className="container">
         <figure className="about-banner">
-          <img src={absoluteimage} alt="Aditya's Photo" className="img-cover" />
-          <img src={aboutbanner} alt="Aditya's Photo" className="abs-img" />
+          <div className="banner-images">
+            <img src={absoluteimage} alt="Aditya's Photo" className="img-cover" />
+            <img src={aboutbanner} alt="Aditya's Photo" className="abs-img" />
+          </div>
 
-          {/* Icons with React Icons */}
-          <div className="abs-icon abs-icon-1">
-            <IoLogoReact />
-          </div>
-          <div className="abs-icon abs-icon-2">
-            <IoLogoNodejs />
-          </div>
-          <div className="abs-icon abs-icon-3">
-            <IoLogoPython />
-          </div>
-          <div className="abs-icon abs-icon-4">
-            <IoLogoDocker />
-          </div>
-          <div className="abs-icon abs-icon-5">
-            <IoLogoAndroid />
-          </div>
-          <div className="abs-icon abs-icon-6">
-            <IoLogoAmazon />
-          </div>
-          <div className="abs-icon abs-icon-7">
-            <SiKubernetes />
-          </div>
-          <div className="abs-icon abs-icon-8">
-            <SiTerraform />
+          {/* Blog or Gallery Link */}
+          <div className="about-link">
+            <h3>Explore More</h3>
+            <p>Check out my blog for insights and updates, or visit my personal gallery to see my creative side.</p>
+            <div className="btn-container">
+              <a href="https://yourblogurl.com" target="_blank" rel="noopener noreferrer" className="btn btn-primary">
+                Visit My Blog
+              </a>
+              <a href="https://yourgalleryurl.com" target="_blank" rel="noopener noreferrer" className="btn btn-secondary">
+                View My Gallery
+              </a>
+            </div>
+
+            {/* Social Links Section */}
+            <div className="social-connect">
+              <h3>Let's Connect!</h3>
+              <p>Feel free to reach out to me on any of these platforms:</p>
+              <div className="social-links">
+                <a
+                  href="https://github.com/AditHash"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="social-link"
+                  aria-label="GitHub"
+                >
+                  <FaGithub />
+                </a>
+                <a
+                  href="https://www.linkedin.com/in/aditya-dey-b533681b8/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="social-link"
+                  aria-label="LinkedIn"
+                >
+                  <FaLinkedin />
+                </a>
+                <a
+                  href="https://twitter.com/your-profile"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="social-link"
+                  aria-label="Twitter"
+                >
+                  <FaTwitter />
+                </a>
+                <a
+                  href="https://instagram.com/your-profile"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="social-link"
+                  aria-label="Instagram"
+                >
+                  <FaInstagram />
+                </a>
+              </div>
+            </div>
           </div>
         </figure>
 
         <div className="about-content">
           <p className="section-subtitle">
-            Hi, I'm a Developer
+            About Me
           </p>
           <h2 className="h2 section-title">
-            Driving Innovation with AI & Scalable Solutions
+            Hi, I'm a Backend Developer with a passion for ML
           </h2>
 
-          {/* AI/ML Focus */}
           <p className="section-text">
-            I specialize in building AI-powered applications that utilize
-            machine learning and generative AI to deliver adaptive, intelligent
-            solutions. My work spans across NLP, computer vision, and predictive
-            analytics, empowering businesses to make data-driven decisions and
-            automate processes.
+            I specialize in building robust backend systems using Python and Node.js that power modern applications. From designing RESTful APIs to implementing microservices, I ensure seamless integration, high performance, and scalability with containers. My expertise extends to database optimization and cloud-based architectures, delivering reliable solutions for complex business needs.
           </p>
 
-          {/* Development and Deployment */}
           <p className="section-text">
-            In addition to my AI expertise, I build scalable web and mobile
-            applications using the MERN stack and Flutter. I also design robust
-            cloud architectures with AWS and ensure seamless deployments using
-            Docker and Kubernetes, ensuring scalability and performance in
-            production environments.
+            My passion lies in leveraging ML, DL, NLP, and Gen AI to solve real-world problems. I develop intelligent systems for tasks like sentiment analysis, text summarization, and chatbot development. By combining machine learning with cutting-edge NLP techniques, I create solutions that enhance user experiences and drive innovation.
           </p>
 
           <a href="#portfolio" className="btn btn-primary blue">

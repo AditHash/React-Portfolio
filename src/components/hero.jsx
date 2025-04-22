@@ -13,13 +13,14 @@ function Hero() {
           <div className="elem elem-1"><p className="elem-title">2</p><p className="elem-text">Years of Success</p></div>
           <div className="elem elem-2"><p className="elem-title">40+</p><p className="elem-text">Projects Completed</p></div>
           <div className="elem elem-3"><ion-icon name="trophy"></ion-icon></div>
-          {/* Removed the rotating image */}
+          <div className="elem elem-4"><ion-icon name="globe"></ion-icon></div>
         </div>
 
         <div className="hero-content">
           <h2 className="hero-title">
             <span style={{ fontFamily: 'Arial, sans-serif' }}>Hello I am</span>
             <strong style={{ fontFamily: 'Segoe UI, monospace' }}>Aditya Dey</strong>
+            <span style={{ fontFamily: 'Arial, sans-serif' }}> Software Development Engineer</span>
           </h2>
           <p className="hero-text">
             <Typewriter

@@ -1,7 +1,7 @@
 .about {
-  padding-block: 120px 180px;
-  background: linear-gradient(100deg, rgb(176, 176, 240), #e5e7ff);
-  color: #222;
+  padding-block: 100px 150px;
+  background: url('../assets/images/nasa.jpg') no-repeat center center/cover; /* Background image */
+  color: #f0f0f0; /* Light text for better contrast */
 }
 
 .about .container {
@@ -12,17 +12,30 @@
 }
 
 .about-banner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
   position: relative;
-  background-color: var(--independence);
-  border-radius: var(--radius-10);
+  background-color: #ffffff;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   margin-block-end: 30px;
   font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
   animation: fadeInUp 1.2s ease-in-out;
-  overflow: visible;
+  overflow: hidden;
+}
+
+.banner-images {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .about-banner > .img-cover {
-  border-radius: inherit;
+  border-radius: 15px;
   width: 100%;
   object-fit: cover;
   z-index: 1; /* Middle layer */
@@ -30,29 +43,61 @@
 }
 
 .abs-img {
-  display: grid;
-  width: 220px;
-  height: 220px;
+  width: 150px;
+  height: 150px;
   object-fit: cover;
   border-radius: 50%;
   position: absolute;
-  z-index: 2; /* Bottom layer */
-  bottom: -50px;
-  left: -50px;
+  bottom: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 5px solid #ffffff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   animation: scaleUp 1.2s ease-in-out forwards;
 }
 
-.abs-icon {
-  display: grid;
+.icon-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
   justify-content: center;
   align-items: center;
-  position: absolute;
-  font-size: 4rem;
-  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent overlay */
+  padding: 20px; /* Add padding for spacing */
+  box-sizing: border-box; /* Ensure padding is included in dimensions */
+}
+
+.icon-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Ensure 4 columns */
+  gap: 20px; /* Add spacing between icons */
+  justify-items: center; /* Center icons horizontally */
+  align-items: center; /* Center icons vertically */
+  width: 100%; /* Ensure grid spans full width */
+  max-width: 600px; /* Limit grid width */
+}
+
+.abs-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px; /* Increased width */
+  height: 100px; /* Increased height */
+  background-color: #ffffff;
   border-radius: 50%;
-  color: white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  font-size: 3rem; /* Increased font size */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   z-index: 3; /* Top layer */
   animation: floatIcon 2.5s ease-in-out infinite;
+}
+
+.abs-icon:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
 }
 
 /* New positions for icons */
@@ -66,47 +111,50 @@
 .abs-icon-8 { top: 140px; left: -20px; background-color: purple; }
 
 .about-content {
-  text-align: right;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
   animation: fadeInUp 1.2s ease-in-out;
+  font-size: 1.5rem; /* Increased font size */
 }
 
 .about .section-title {
-  font-size: 2.5rem;
-  margin-block-end: 30px;
-  color: #222;
+  font-size: 3rem; /* Increased font size */
+  margin-bottom: 20px;
+  color: #4dff00; /* Bright yellow for emphasis */
   font-weight: bold;
   text-align: left;
 }
 
 .about .section-subtitle {
-  font-size: 1.5rem;
-  color: var(--bluetiful);
-  margin-block-end: 20px;
+  font-size: 1.8rem; /* Increased font size */
+  color: #008cff; /* Light blue for a professional look */
+  margin-bottom: 15px;
 }
 
 .about .section-text {
-  font-size: 1.5rem;
-  line-height: 1.8;
-  margin-block-end: 20px;
+  font-size: 1.5rem; /* Increased font size */
+  line-height: 2; /* Adjusted line height for better readability */
+  margin-bottom: 20px;
+  color: #e0e0e0; /* Softer white for body text */
   text-align: left;
 }
 
-
 .btn-primary {
-  background-color: var(--bluetiful);
+  background-color: #ff5733; /* Bright orange for call-to-action */
   color: white;
-  padding: 10px 20px;
-  font-size: 2rem;
-  border-radius: var(--radius-10);
+  padding: 12px 24px;
+  font-size: 1.2rem;
+  border-radius: 8px;
   text-decoration: none;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease;
   align-items: center;
 }
 
 .btn-primary:hover {
-  background-color: #004a9f;
-  transform: translateY(-5px);
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 1.9);
+  background-color: #c70039; /* Darker red for hover effect */
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
   text-align: left;
 }
 
@@ -344,4 +392,55 @@
     opacity: 1;
     transform: translateX(0);
   }
+}
+
+.about-link {
+  text-align: center;
+  margin-top: 20px;
+  background-color: #1a2c54; /* Match card background with theme */
+  padding: 30px;
+  border-radius: 15px; /* Rounded rectangle card */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
+}
+
+.about-link h3 {
+  font-size: 2rem;
+  color: #4dff00; /* Bright green for emphasis */
+  margin-bottom: 10px;
+}
+
+.about-link p {
+  font-size: 1.2rem;
+  color: #e0e0e0; /* Softer white for body text */
+  margin-bottom: 20px;
+}
+
+.about-link .btn-container {
+  display: flex;
+  justify-content: center; /* Center-align buttons */
+  gap: 15px; /* Spacing between buttons */
+}
+
+.btn-primary,
+.btn-secondary {
+  background-color: #4dff00; /* Bright green for buttons */
+  color: black;
+  padding: 12px 24px;
+  font-size: 1.2rem;
+  border-radius: 20px; /* Rounded rectangle buttons */
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border: none;
+}
+
+.btn-secondary {
+  background-color: #008cff; /* Light blue for secondary button */
+}
+
+.btn-primary:hover,
+.btn-secondary:hover {
+  background-color: #0056b3; /* Darker blue for hover effect */
+  color: white;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
